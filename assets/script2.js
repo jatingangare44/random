@@ -26,7 +26,7 @@ function showRandom(category) {
 else if (category === 'quote') {
   outputBox.textContent = "Loading quote...";
 
-  fetch("http://localhost:3000/api/quote")  // Local backend route
+  fetch("https://random-xw53.onrender.com/api/quote")  // Local backend route
     .then(res => res.json())
     .then(data => {
       if (data.length > 0) {
@@ -129,7 +129,7 @@ else if (category === 'music') {
 else if (category === 'movie') {
   //const TMDB_API_KEY = "ae50e70ae0803997e8bac1c8c25081cc"; 
 outputBox.textContent = "Loading movie...";
-  fetch("http://localhost:3000/api/movie")
+  fetch("https://random-xw53.onrender.com/api/movie")
     .then(res => res.json())
     .then(data => {
       if (data.results && data.results.length > 0) {
@@ -177,7 +177,7 @@ outputBox.textContent = "Loading movie...";
   else if (category === 'game') {
   outputBox.textContent = "Loading game...";
 
-  fetch("http://localhost:3000/api/game")
+  fetch("https://random-xw53.onrender.com/api/game")
     .then(res => res.json())
     .then(data => {
       const games = data.results;
